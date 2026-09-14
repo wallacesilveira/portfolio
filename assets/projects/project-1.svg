@@ -1,0 +1,8 @@
+<!-- TODO: substituir por screenshot real do Projeto Alpha (recomendado: 480x320px, .jpg/.png/.webp) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#141b19"/>
+  <rect x="0" y="0" width="480" height="320" fill="#22d3b3" opacity="0.12"/>
+  <circle cx="240" cy="140" r="46" fill="none" stroke="#22d3b3" stroke-width="3"/>
+  <path d="M220 140h40M240 120v40" stroke="#22d3b3" stroke-width="3"/>
+  <text x="240" y="230" font-family="Arial, sans-serif" font-size="22" fill="#9fb3ae" text-anchor="middle">Projeto Alpha</text>
+</svg>
