@@ -755,3 +755,25 @@ button { font-family: inherit; cursor: pointer; }
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { width: 100%; }
 }
+
+/* ==========================================================================
+   Botão flutuante do WhatsApp
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 4.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  transition: background var(--transition-fast), transform var(--transition-base);
+  z-index: 90;
+}
+.whatsapp-float:hover { background: var(--accent-strong); transform: translateY(-2px); }
+.whatsapp-float:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

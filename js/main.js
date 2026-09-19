@@ -19,7 +19,7 @@
   try {
     savedTheme = localStorage.getItem(THEME_KEY);
   } catch (e) {
-    /* localStorage indisponível (modo privado, etc.) — segue com o padrão */
+    /* localStorage indisponível (modo privado, etc.), segue com o padrão */
   }
   applyTheme(savedTheme === 'light' ? 'light' : 'dark');
 

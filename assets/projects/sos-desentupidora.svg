@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#141b19"/>
+  <rect width="480" height="320" fill="#22d3b3" opacity="0.12"/>
+  <rect x="120" y="70" width="240" height="150" rx="10" fill="none" stroke="#22d3b3" stroke-width="3"/>
+  <path d="M120 100h240" stroke="#22d3b3" stroke-width="3"/>
+  <circle cx="140" cy="85" r="4" fill="#22d3b3"/><circle cx="156" cy="85" r="4" fill="#22d3b3"/>
+  <text x="240" y="270" font-family="Arial, sans-serif" font-size="24" fill="#9fb3ae" text-anchor="middle">SOS Desentupidora</text>
+</svg>
