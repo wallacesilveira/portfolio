@@ -133,12 +133,6 @@
       event.preventDefault();
 
       var action = form.getAttribute('action');
-      if (!action || action.indexOf('SEU_FORM_ID') !== -1) {
-        formStatus.textContent = 'Formulário ainda não configurado. Defina o endpoint do Formspree em index.html.';
-        formStatus.className = 'form-status error';
-        return;
-      }
-
       var data = new FormData(form);
       formStatus.textContent = 'Enviando...';
       formStatus.className = 'form-status';
@@ -149,7 +143,10 @@
         headers: { Accept: 'application/json' }
       })
         .then(function (response) {
-          if (response.ok) {
+          return response.json();
+        })
+        .then(function (result) {
+          if (result && result.success) {
             formStatus.textContent = 'Mensagem enviada com sucesso! Retorno em breve.';
             formStatus.className = 'form-status success';
             form.reset();
@@ -158,8 +155,9 @@
           }
         })
         .catch(function () {
-          formStatus.textContent = 'Não foi possível enviar agora. Tente novamente ou use o e-mail/telefone ao lado.';
-          formStatus.className = 'form-status error';
+          /* Se o fetch for bloqueado (CORS/rede), usa o POST nativo do formulário,
+             igual ao projeto wallacesilveira: o StaticForms envia e redireciona de volta. */
+          form.submit();
         });
     });
   }
